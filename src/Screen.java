@@ -133,7 +133,7 @@ public class Screen extends JFrame{
         long diff;
         for (Patient p : patients) {
             if (towers.contains(p.getTower())) {
-                diff = DAYS.between(p.getDateOfRecovery(), curDate);
+                diff = DAYS.between(p.getDateOfReporting(), curDate);
                 if (diff > 21) {
                     recovered.add(p);
                 }else if (diff >= 0){
